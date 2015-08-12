@@ -1,3 +1,9 @@
+# つかいかた
+
+1. `php -sS 127.0.0.1:8888`
+2. http://127.0.0.1:8888/report.php
+
+
 # GitHub API PHP Client
 
 See [full API reference](https://github.com/tan-tan-kanarek/github-php-client/blob/master/client.md "full API reference")
