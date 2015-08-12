@@ -19,8 +19,10 @@ $issues = $client->request("/repos/EC-CUBE/ec-cube/issues", 'GET', $data, 200, '
 
 $summary = '';
 foreach ($issues as $issue) {
+    $summary .= method_exists($issue->getPullRequest(), 'getHtmlUrl') ? '[P]' : '[I]';
     /* @var $issue GitHubIssue */
     $summary .= "[" . $issue->getNumber() . "]: "
+        . $issue->getState()
         . $issue->getTitle()
         . $issue->getUser()->getLogin()
         . $issue->getCreatedAt()
